@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yummy Food Vlog</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial, sans-serif;background:#fcfcfc;}
+
+.header{
+    background:#c0392b;
+    color:white;
+    padding:20px;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.navbar{
+    background:#d35400;
+    padding:10px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.menu{
+    display:flex;
+    gap:20px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+}
+
+.burger{
+    display:none;
+    flex-direction:column;
+    gap:4px;
+    cursor:pointer;
+}
+
+.burger span{
+    width:25px;
+    height:3px;
+    background:white;
+}
+
+@media(max-width:768px){
+    .menu{
+        display:none;
+        flex-direction:column;
+        background:#d35400;
+        padding:10px;
+        margin-top:10px;
+    }
+    .menu.active{
+        display:flex;
+    }
+    .burger{
+        display:flex;
+    }
+}
+
+.hero{
+    background:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80') center/cover;
+    height:250px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+.hero h1{font-size:32px;}
+.hero p{font-size:16px;margin-top:5px;}
+</style>
+</head>
+
+<body>
+
+<div class="header">YUMMY</div>
+
+<div class="navbar">
+    <div class="burger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="menu" id="menu">
+        <a href="#">Home</a>
+        <a href="#">Reviews</a>
+        <a href="#">Vlogs</a>
+        <a href="#">Recipes</a>
+    </div>
+</div>
+
+<div class="hero">
+    <div>
+        <h1>Taste the World</h1>
+        <p>Street food & hidden gems.</p>
+    </div>
+</div>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
